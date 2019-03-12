@@ -11,8 +11,8 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get delete" do
-    get articles_delete_url
+  test "should get destroy" do
+    get articles_destroy_url
     assert_response :success
   end
 
