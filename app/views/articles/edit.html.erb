@@ -1,12 +1,16 @@
-<h1>論文編集</h1>
+<h2>Edit posts</h2>
 <%= form_with model: @article, local: true do |form| %>
+<div>
+  <div class="form-group mt-4">
+    <%= form.label "Title" %>
+    <p><%= form.text_field :title, class: "form-control" %></p>
+  </div>
+  <div class="form-group mt-4">
+    <%= form.label "Body" %>
+    <p><%= form.text_area :body, rows: 8, class: "form-control" %></p>
+  </div>
   <p>
-    論文タイトル：<br>
-    <%= form.text_field :title %>
+    <%= form.submit 'Update', class: "btn btn-dark btn-block my-4" %>
   </p>
-  <p>
-    本文：<br>
-    <%= form.text_area :body %>
-  </p>
-  <%= form.submit "編集" %>
+</div>
 <% end %>
